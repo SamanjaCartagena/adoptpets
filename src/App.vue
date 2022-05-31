@@ -1,16 +1,21 @@
 <template>
   <div id="app">
+    <div id="nav">
     <nav>
       <router-link to="/">Home</router-link> |
       <router-link to="/cats">Cats</router-link> |
       <router-link to="/dogs">Dogs</router-link> |
-      <router-link to="/pets">Pet</router-link>
-
     </nav>
+    </div>
     <router-view/>
   </div>
 </template>
+<script>
 
+export default {
+  name: 'App'
+}
+</script>
 <style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;

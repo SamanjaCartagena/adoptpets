@@ -1,16 +1,26 @@
 <template>
   <div>
-    <b-table striped hover :items="cats"/>
+    <pet-table
+     species="cats" 
+     :pets="cats"></pet-table>
   </div>
 </template>
 
 <script>
-import cats from '@/data/cats'
+import { mapState } from 'vuex'
+import PetTable from '@components/PetTable.vue'
 export default {
   data () {
-    return {
-      cats
-    }
+    return {}
+  },
+  components:{
+   PetTable
+  },
+
+  computed: {
+    ...mapState([
+      'cats'
+    ])
   }
 
 }
